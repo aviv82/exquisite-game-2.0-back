@@ -18,7 +18,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::test.test",
-      "inversedBy": "aspects"
+      "mappedBy": "aspects"
     }
   }
 }
