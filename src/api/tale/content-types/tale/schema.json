@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tale",
     "pluralName": "tales",
-    "displayName": "tale"
+    "displayName": "tale",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,11 +21,11 @@
     "title": {
       "type": "string"
     },
-    "creator": {
+    "creators": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "author"
+      "inversedBy": "authors"
     },
     "contributor": {
       "type": "relation",

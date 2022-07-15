@@ -70,17 +70,17 @@
       "type": "media",
       "multiple": false
     },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tale.tale",
-      "inversedBy": "creator"
-    },
     "collaboration": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tale.tale",
-      "inversedBy": "contributor"
+      "mappedBy": "contributor"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tale.tale",
+      "inversedBy": "creators"
     }
   }
 }
