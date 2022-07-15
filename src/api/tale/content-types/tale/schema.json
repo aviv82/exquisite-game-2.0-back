@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tales",
+  "info": {
+    "singularName": "tale",
+    "pluralName": "tales",
+    "displayName": "tale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "segment": {
+      "displayName": "segment",
+      "type": "component",
+      "repeatable": true,
+      "component": "segment.segment"
+    },
+    "title": {
+      "type": "string"
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "author"
+    },
+    "contributor": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "collaboration"
+    },
+    "complete": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

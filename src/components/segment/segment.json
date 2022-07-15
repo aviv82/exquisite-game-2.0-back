@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_segment_segments",
+  "info": {
+    "displayName": "segment",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "richtext"
+    },
+    "writer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
